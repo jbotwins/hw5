@@ -1,0 +1,49 @@
+.wrapper {
+  font-size: 14px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 20px;
+}
+
+header h1 {
+  text-align: center;
+}
+
+section {
+  margin: 0 auto;
+}
+
+.chart, #output_2 {
+  display: flex;
+  align-items: end;
+  text-align: center;
+}
+
+.currencyContainer {
+  flex: 1;
+  margin: 0 3px;
+  display: grid;
+  grid-template-rows: 200px 40px;
+  align-items: end;
+}
+
+.currencyBar {
+  align-self: flex-end;
+  text-align: center;
+  min-width: 3px;
+  background-color: grey;
+  /* height: 50%; */
+}
+
+.currencyBarLabel {
+  min-width: 3px;
+  transform: rotate(75deg)
+}
+
+.currencyBarLabel span {
+  display: none;
+}
+
+.currencyContainer:hover .currencyBarLabel,
+.currencyContainer:hover .currencyBar {
+  font-weight: bold;
+}
