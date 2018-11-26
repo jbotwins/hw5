@@ -225,7 +225,7 @@ class App extends Component {
           this.state.rates.map(([key, value, color, index]) => (
             <div className="currencyContainer">
               <div className="currencyBar" alt={value} style={{background: color, height: ((this.state.min / value) * 100) + '%'}}></div>
-              <div className="currencyBarLabel">{value}{key}<span>{value}</span><span>{color}</span><span>{index}</span></div>
+              <div className="currencyBarLabel">{key}<span>{value}</span><span>{color}</span><span>{index}</span></div>
             </div>
           ))
         }
