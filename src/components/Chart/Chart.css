@@ -1,0 +1,13 @@
+.Chart-Container {
+
+}
+
+.Chart-Chart {
+  display: flex;
+  align-items: end;
+  text-align: center;
+}
+
+.Chart-Note {
+
+}

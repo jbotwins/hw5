@@ -4,8 +4,8 @@ import './Chart.css';
 import Bar from '../Bar/Bar.js';
 
 const Chart = (props) => (
-  <div className="chart_Container">
-    <div className="chart">
+  <div className="Chart-Container">
+    <div className="Chart-Chart">
     {
       props.rates.map(([key, value, color, index]) => (
         <Bar
@@ -18,7 +18,7 @@ const Chart = (props) => (
       ))
       }
     </div>
-    <p>{props.chartNote}</p>
+    <p className="Chart-Note">{props.chartNote}</p>
   </div>
 );
 

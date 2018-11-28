@@ -1,0 +1,33 @@
+.Bar-Container {
+  flex: 1;
+  margin: 0 3px;
+  display: grid;
+  grid-template-rows: 200px 40px;
+  align-items: end;
+}
+
+.Bar-Bar {
+  align-self: flex-end;
+  text-align: center;
+  min-width: 3px;
+  background-color: grey;
+  /* height: 50%; */
+}
+
+.Bar-Label {
+  min-width: 3px;
+  transform: rotate(75deg)
+}
+
+.Bar-Label_visible {
+  display: inherit;
+}
+
+.Bar-Label_invisible {
+  display: none;
+}
+
+.Bar-Container:hover .Bar-Label,
+.Bar-Container:hover .Bar-Bar {
+  font-weight: bold;
+}

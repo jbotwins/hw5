@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import './bare.min.css';
-import './graph.css';
 
 import Select from './components/Select/Select.js';
 import Header from './components/Header/Header.js';
