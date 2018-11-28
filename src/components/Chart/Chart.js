@@ -2,9 +2,15 @@ import React from 'react';
 import './Chart.css';
 
 import Bar from '../Bar/Bar.js';
+import ChartControls from '../ChartControls/ChartControls.js';
 
 const Chart = (props) => (
   <div className="Chart-Container">
+    <ChartControls
+      state={props.state} // Not a good approach. onChange doesn't work.
+      onSortChange={props.onSortChange}
+      onCurrencyChange={props.onCurrencyChange}
+    />
     <div className="Chart-Chart">
     {
       props.rates.map(([key, value, color, index]) => (

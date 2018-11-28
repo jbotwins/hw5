@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import './bare.min.css';
 
-import Select from './components/Select/Select.js';
 import Header from './components/Header/Header.js';
 import Chart from './components/Chart/Chart.js';
+import ChartControls from './components/ChartControls/ChartControls.js';
 
 class App extends Component {
   state = {
@@ -209,21 +208,20 @@ class App extends Component {
           date={this.state.date}
           sort={this.state.sort}
         />
-        <Select
-          title="Select a base currency:"
-          value={this.state.base}
-          options={this.state.curList}
-          onChange={this.onCurrencyChange}
-        />
-        <Select
-          title="Select a sort option:"
-          value={this.state.sort}
-          options={this.state.sortList}
-          onChange={this.onSortChange}
-        />
         <Chart
+          // These five are for the chart.
           rates={this.state.rates}
           min={this.state.min}
+          
+          // These three are for the note at the bottom of chart.
+          base={this.state.base}
+          date={this.state.date}
+          sort={this.state.sort}
+
+          // These three are for the Selects.
+          state={this.state} // Is this a good approach?
+          onSortChange={this.onSortChange}
+          onCurrencyChange={this.onCurrencyChange}
         />
       </div>
     )
