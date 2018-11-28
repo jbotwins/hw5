@@ -3,6 +3,10 @@ import './App.css';
 import './bare.min.css';
 import './graph.css';
 
+import Select from './components/Select/Select.js';
+import Header from './components/Header/Header.js';
+import Chart from './components/Chart/Chart.js';
+
 class App extends Component {
   state = {
     curList:[],
@@ -63,7 +67,7 @@ class App extends Component {
     })
   }
 
-  onSelectChange = (ev) => {
+  onCurrencyChange = (ev) => {
     // 0.9 Prep fetch. Fetch new data. Build arrays. Sort arrays. Update state.
     const newBase = ev.target.value
     this.setState({
@@ -200,36 +204,27 @@ class App extends Component {
   render() {
     return (
       <div className="wrapper">
-        <header>
-        <h1>Exchange Rates by {this.state.base} || European Union || November 2018</h1>
-          <h2>Date: {this.state.date} || Sorted by: {this.state.sort}</h2>
-        </header>
-        <h3>Base Currency:</h3>
-        <select value={this.state.base} onChange={this.onSelectChange}>
-        {
-          this.state.curList.map(cur => (
-            <option value={cur}>{cur}</option>
-          ))
-        }
-        </select>
-        <h3>Sort by:</h3>
-        <select value={this.state.sort} onChange={this.onSortChange}>
-        {
-          this.state.sortList.map(sortOption => (
-            <option value={sortOption}>{sortOption}</option>
-          ))
-        }
-        </select>
-        <div className="chart">
-        {
-          this.state.rates.map(([key, value, color, index]) => (
-            <div className="currencyContainer">
-              <div className="currencyBar" alt={value} style={{background: color, height: ((this.state.min / value) * 100) + '%'}}></div>
-              <div className="currencyBarLabel">{key}<span>{value}</span><span>{color}</span><span>{index}</span></div>
-            </div>
-          ))
-        }
-        </div>
+        <Header
+          base={this.state.base}
+          date={this.state.date}
+          sort={this.state.sort}
+        />
+        <Select
+          title="Select a base currency:"
+          value={this.state.base}
+          options={this.state.curList}
+          onChange={this.onCurrencyChange}
+        />
+        <Select
+          title="Select a sort option:"
+          value={this.state.sort}
+          options={this.state.sortList}
+          onChange={this.onSortChange}
+        />
+        <Chart
+          rates={this.state.rates}
+          min={this.state.min}
+        />
       </div>
     )
   }
