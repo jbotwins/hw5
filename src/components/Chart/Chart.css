@@ -8,6 +8,18 @@
   text-align: center;
 }
 
-.Chart-Note {
+.Chart-DetailContainer {
 
+}
+
+.Chart-DetailBase {
+  font-weight: bold;
+}
+
+.Chart-DetailDate {
+  font-weight: lighter;
+}
+
+.Chart-DetailSort {
+  font-style: italic;
 }

@@ -18,7 +18,11 @@ const Chart = (props) => (
       ))
       }
     </div>
-    <p className="Chart-Note">{props.chartNote}</p>
+    <div className="Chart-NoteContainer">
+      <p className="Chart-DetailBase">Base Currency: {props.base}</p>
+      <p className="Chart-DetailDate">Date: {props.date}</p>
+      <p className="Chart-DetailSort">Sorted by: {props.sort}</p>
+    </div>
   </div>
 );
 

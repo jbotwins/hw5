@@ -204,6 +204,7 @@ class App extends Component {
     return (
       <div className="wrapper">
         <Header
+          title="Exchange Rates || European Central Bank"
           base={this.state.base}
           date={this.state.date}
           sort={this.state.sort}

@@ -1,5 +1,56 @@
 .wrapper {
-  font-size: 14px;
+}
+
+body {
   font-family: "Lucida Sans Unicode", "Lucida Grande", Helvetica, Arial, sans-serif;
-  padding: 20px;
+
+  color: #2e3538;
+  margin: 0;
+  padding: 2rem;
+  font-size: 1rem;
+  line-height: 1.8;
+  font-weight: 300
+}
+
+@media (max-width:30rem) {
+  body {
+    overflow-x: hidden;
+    padding: .25rem;
+  }
+}
+
+a:active, a:hover {
+  outline: 0
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 2rem;
+  font-weight: 200
+}
+
+img {
+  border: 0
+}
+
+select {
+  padding: .5rem 3rem .5rem 1rem;
+  display: block;
+  width: 100%;
+  border: 1px solid #e3e6e8;
+  background: #fff url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2248%22%20height%3D%2248%22%20viewBox%3D%220%200%2048%2048%22%3E%3Cpath%20d%3D%22M14.83%2016.42L24%2025.59l9.17-9.17L36%2019.25l-12%2012-12-12z%22%2F%3E%3C%2Fsvg%3E) no-repeat right 1rem center;
+  background-size: 2rem;
+  border-radius: 5px;
+  height: 4rem;
+  font-size: 1rem;
+  text-indent: .5rem;
+  margin: .5rem 0 2rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer
+}
+
+select:focus, select:hover {
+  border-color: #679;
+  outline: 0
 }
