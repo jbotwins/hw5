@@ -3,7 +3,6 @@ import './App.css';
 
 import Header from './components/Header/Header.js';
 import Chart from './components/Chart/Chart.js';
-import ChartControls from './components/ChartControls/ChartControls.js';
 
 class App extends Component {
   state = {
@@ -212,7 +211,7 @@ class App extends Component {
           // These five are for the chart.
           rates={this.state.rates}
           min={this.state.min}
-          
+
           // These three are for the note at the bottom of chart.
           base={this.state.base}
           date={this.state.date}
