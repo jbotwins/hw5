@@ -7,9 +7,8 @@ import ChartControls from '../ChartControls/ChartControls.js';
 const Chart = (props) => (
   <div className="Chart-Container">
     <ChartControls
-      state={props.state} // Not a good approach. onChange doesn't work.
-      onSortChange={props.onSortChange}
-      onCurrencyChange={props.onCurrencyChange}
+      // This is where Ill split the cable into wires.
+      {...props}
     />
     <div className="Chart-Chart">
     {

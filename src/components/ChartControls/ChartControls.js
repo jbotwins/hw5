@@ -10,14 +10,14 @@ class ChartControls extends Component {
       <div className="ChartControls-Container">
         <Select
           title="Base currency:"
-          value={this.props.state.base}
-          options={this.props.state.curList}
+          value={this.props.base}
+          options={this.props.curList}
           onChange={this.props.onCurrencyChange}
         />
         <Select
           title="Sort by:"
-          value={this.props.state.sort}
-          options={this.props.state.sortList}
+          value={this.props.sort}
+          options={this.props.sortList}
           onChange={this.props.onSortChange}
         />
       </div>

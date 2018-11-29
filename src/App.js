@@ -209,16 +209,18 @@ class App extends Component {
         />
         <Chart
           // These five are for the chart.
-          rates={this.state.rates}
-          min={this.state.min}
-
-          // These three are for the note at the bottom of chart.
-          base={this.state.base}
-          date={this.state.date}
-          sort={this.state.sort}
+          {...this.state}
+          //someProp={this.props.thing1}
+          // These three are for the Selects.
+          onSortChange={this.onSortChange}
+          onCurrencyChange={this.onCurrencyChange}
+        />
+        <Chart
+          // These five are for the chart.
+          {...this.state}
+          //someProp={this.props.thing2}
 
           // These three are for the Selects.
-          state={this.state} // Is this a good approach?
           onSortChange={this.onSortChange}
           onCurrencyChange={this.onCurrencyChange}
         />
