@@ -15,7 +15,7 @@ const Chart = (props) => (
       props.rates.map(([key, value, color, index]) => (
         <Bar
           min={props.min}
-          name={key} // originally this was: key={key} and did not work. Why is that?
+          name={key}
           value={value}
           index={index}
           color={color}
@@ -27,6 +27,7 @@ const Chart = (props) => (
       <p className="Chart-DetailBase">Base Currency: {props.base}</p>
       <p className="Chart-DetailDate">Date: {props.date}</p>
       <p className="Chart-DetailSort">Sorted by: {props.sort}</p>
+      <p className="Chart-DetailMin">Minimum Currency value: {props.min}</p>
     </div>
   </div>
 );

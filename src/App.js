@@ -208,19 +208,9 @@ class App extends Component {
           sort={this.state.sort}
         />
         <Chart
-          // These five are for the chart.
+          // For the chart.
           {...this.state}
-          //someProp={this.props.thing1}
-          // These three are for the Selects.
-          onSortChange={this.onSortChange}
-          onCurrencyChange={this.onCurrencyChange}
-        />
-        <Chart
-          // These five are for the chart.
-          {...this.state}
-          //someProp={this.props.thing2}
-
-          // These three are for the Selects.
+          // For the Selects.
           onSortChange={this.onSortChange}
           onCurrencyChange={this.onCurrencyChange}
         />
