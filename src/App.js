@@ -13,9 +13,33 @@ class App extends Component {
     rates: [],
   }
 
+  checkRatesForBase = (ratesData) => {
+    if (ratesData.hasOwnProperty(ratesData.base)) {
+      console.log('True. The base currency is already in the Object');
+     return this.buildArray(ratesData)
+    } else {
+      console.log('False. The base currency is not in the Object');
+      ratesData.rates[ratesData.base] = 1
+      return this.buildArray(ratesData)
+  }
+}
+
+buildArray = (ratesData) => {
+  console.log(ratesData);
+  return 'Hello'
+}
+
   componentDidMount () {
     const apiURL = 'https://api.exchangeratesapi.io/latest'
     fetch(apiURL).then(response => response.json()).then(data => {
+      this.setState({
+        sort: 'API',
+        base: data.base,
+        date: data.date,
+        returned: this.checkRatesForBase(data),
+      })
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
       this.setState({
         sort: 'API',
         base: data.base,
